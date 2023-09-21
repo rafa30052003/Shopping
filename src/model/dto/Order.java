@@ -6,14 +6,16 @@ public class Order {
     private int cod;
     private String nombre;
     private String proveedor;
+    private Customer cliente;
 
     public Order() {
     }
 
-    public Order(int cod, String nombre, String proveedor) {
+    public Order(int cod, String nombre, String proveedor, Customer cliente) {
         this.cod = cod;
         this.nombre = nombre;
         this.proveedor = proveedor;
+        this.cliente = cliente;
     }
 
     public int getCod() {
@@ -40,6 +42,14 @@ public class Order {
         this.proveedor = proveedor;
     }
 
+    public Customer getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Customer cliente) {
+        this.cliente = cliente;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -53,6 +63,7 @@ public class Order {
                 "cod=" + cod +
                 ", nombre='" + nombre + '\'' +
                 ", proveedor='" + proveedor + '\'' +
+                ", cliente=" + cliente +
                 '}';
     }
 }
