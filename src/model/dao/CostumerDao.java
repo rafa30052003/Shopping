@@ -45,4 +45,13 @@ public class CostumerDao {
         return valid;
     }
 
+    public String showAllCustomer() {
+        String result="";
+        for(Customer p: cliente) {
+            if(p!=null) {
+                result+=p+"\n";
+            }
+        }
+        return result;
+    }
 }
