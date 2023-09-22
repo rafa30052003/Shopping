@@ -2,8 +2,62 @@ package view;
 
 public class PrincipalView {
 	
+	public void menuClient() {
+        System.out.println("                             ");
+        System.out.println(" ___________________________ ");
+        System.out.println("|                           |");
+        System.out.println("|    GESTIÓN DE CLIENTES    |");
+        System.out.println("|                           |");
+        System.out.println("| [0]-> Salir               |");
+        System.out.println("| [1]-> Añadir Cliente	    |");
+        System.out.println("| [2]-> Ver Clientes        |");
+        System.out.println("| [3]-> Editar Cliente      |");
+        System.out.println("| [4]-> Eliminar Cliente    |");
+        System.out.println("|                           |");
+        System.out.println("|___________________________|");
+        System.out.println("                             ");
+	}
+	public void addClient() {
+
+        System.out.println("                             ");
+        System.out.println(" __________________________");
+        System.out.println("|                          |");
+        System.out.println("|      AÑADIR CLIENTE      |");
+        System.out.println("|__________________________|");
+        System.out.println("                             ");
+	}
+	public void client() {
+
+        System.out.println("                             ");
+        System.out.println(" __________________________");
+        System.out.println("|                          |");
+        System.out.println("|         CLIENTES         |");
+        System.out.println("|__________________________|");
+        System.out.println("                             ");
+	}
 	
-	public void showManagementMenu() {
+	public void editClient() {
+
+        System.out.println("                             ");
+        System.out.println(" __________________________");
+        System.out.println("|                          |");
+        System.out.println("|      EDITAR CLIENTE      |");
+        System.out.println("|__________________________|");
+        System.out.println("                             ");
+	}
+	
+	public void addOrder() {
+
+        System.out.println("                             ");
+        System.out.println(" __________________________");
+        System.out.println("|                          |");
+        System.out.println("|     ELIMINAR CLIENTE     |");
+        System.out.println("|__________________________|");
+        System.out.println("                             ");
+	}
+	
+	
+	public void menuOrders() {
         System.out.println("                             ");
         System.out.println(" ___________________________ ");
         System.out.println("|                           |");
@@ -19,7 +73,7 @@ public class PrincipalView {
         System.out.println("                             ");
 	}
 	
-	public void addPedido() {
+	public void addOrder() {
 
         System.out.println("                             ");
         System.out.println(" __________________________");
@@ -29,7 +83,7 @@ public class PrincipalView {
         System.out.println("                             ");
 	}
         
-    public void deletePedido() {
+    public void deleteOrder() {
 
             System.out.println("                             ");
             System.out.println(" __________________________");
@@ -39,7 +93,7 @@ public class PrincipalView {
             System.out.println("                             ");
     }
     
-	public void Pedidos() {
+	public void Order() {
 
         System.out.println("                             ");
         System.out.println(" __________________________");
@@ -48,7 +102,7 @@ public class PrincipalView {
         System.out.println("|__________________________|");
         System.out.println("                             ");
 	}
-	public void EditPedidos() {
+	public void EditOrder() {
 
         System.out.println("                             ");
         System.out.println(" __________________________");
