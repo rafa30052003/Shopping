@@ -50,40 +50,6 @@ public class PrincipalView {
 	}
 	
 
-	public void menuClientView() {
-        System.out.println("                             ");
-        System.out.println(" ___________________________ ");
-        System.out.println("|                           |");
-        System.out.println("|    GESTIÓN DE CLIENTES    |");
-        System.out.println("|                           |");
-        System.out.println("| [0]-> Salir               |");
-        System.out.println("| [1]-> Añadir Cliente	    |");
-        System.out.println("| [2]-> Ver Clientes        |");
-        System.out.println("| [3]-> Editar Cliente      |");
-        System.out.println("| [4]-> Eliminar Cliente    |");
-        System.out.println("|                           |");
-        System.out.println("|___________________________|");
-        System.out.println("                             ");
-	}
-	public void addClientView() {
-
-        System.out.println("                             ");
-        System.out.println(" __________________________");
-        System.out.println("|                          |");
-        System.out.println("|      AÑADIR CLIENTE      |");
-        System.out.println("|__________________________|");
-        System.out.println("                             ");
-	}
-	public void clientView() {
-
-        System.out.println("                             ");
-        System.out.println(" __________________________");
-        System.out.println("|                          |");
-        System.out.println("|         CLIENTES         |");
-        System.out.println("|__________________________|");
-        System.out.println("                             ");
-	}
-	
 
 	public void editClient() {
 
