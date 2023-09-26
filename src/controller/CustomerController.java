@@ -17,6 +17,7 @@ import java.util.Scanner;
 public class CustomerController {
     private CostumerDao customerDao;
     private Scanner scanner;
+    CostumerDao cd = new CostumerDao();
 
     public CustomerController() {
         this.customerDao = new CostumerDao();
@@ -74,7 +75,7 @@ public class CustomerController {
     public void controlSearchCustomer() {
         Utils.print("Search for a customer by DNI:");
         String dni = Utils.devuelveDNI("Enter the DNI to search for: ");
-        Customer customer = customerDao.searchCustomer(dni);
+        Customer customer = customerDao.findCustomer(dni);
 
         if (customer != null) {
             Utils.printObject("Customer found:\n" + customer.toString());
@@ -86,7 +87,7 @@ public class CustomerController {
     public void controlDeleteCustomer() {
         Utils.print("Delete a customer:");
         String dni = Utils.devuelveDNI("Enter the customer's DNI to delete: ");
-        Customer customer = customerDao.searchCustomer(dni);
+        Customer customer = customerDao.findCustomer(dni);
 
         if (customer != null) {
             customerDao.deleteCustomer(customer);
@@ -105,17 +106,22 @@ public class CustomerController {
     }
 
     public void controlaEditCustomer() {
+    	
         pv.editClient();
         Customer u = null;
-        CostumerDao cd = new CostumerDao();
-        u = cd.searchCustomer(Utils.devuelveDNI("Introduce el DNI de el Cliente a modificar: "));
-
-        String nombre = Utils.leeString("Introduce el nombre: ");
-        String tlf = Utils.leeString("Introduce el telefono: ");
-        String adress = Utils.leeString("Introduce la direccion: ");
-        u.setNombre(nombre);
-        u.setTlf(tlf);
-        u.setDireccion(adress);
+        u = (Customer) customerDao.findCustomer(Utils.devuelveDNI("Introduce el DNI de el Cliente a modificar: "));
+        if (u != null) {
+            String nombre = Utils.leeString("Introduce el nombre: ");
+            String tlf = Utils.leeString("Introduce el telefono: ");
+            String adress = Utils.leeString("Introduce la direccion: ");
+            
+            // Now that u is not null, you can safely call its methods
+            u.setNombre(nombre);
+            u.setTlf(tlf);
+            u.setDireccion(adress);
+        } else {
+            System.out.println("Customer not found."); // Handle the case where the customer is not found.
+        }
 
 
     }

@@ -24,7 +24,7 @@ public class PrincipalControlller {
                 cc.controlCustomerMenu();
                 break;
             case 2:
-                //co.controlOrderMenu();
+                oc.controlOrderMenu();
                 break;
 
             default:
