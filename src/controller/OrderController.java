@@ -12,11 +12,12 @@ import java.util.Scanner;
 public class OrderController {
 	private OrderDao orderDao;
     private Scanner scanner;
-    CostumerDao cd= new CostumerDao();
+    CostumerDao cd = new CostumerDao();
     public OrderController() {
         this.orderDao = new OrderDao();
         this.scanner = new Scanner(System.in);
     }
+    
     PrincipalView pv = new PrincipalView();
     public void controlOrderMenu() {
         int option;
@@ -36,10 +37,10 @@ public class OrderController {
                     controlSearchOrder();
                     break;
                 case 3:
-                    controlDeleteOrder();
+                	controlEditOrder();
                     break;
                 case 4:
-                    controlEditOrder();
+                    controlDeleteOrder();
                     break;
                 default:
                     Utils.print("Incorrect option.");
@@ -53,7 +54,7 @@ public class OrderController {
         String nombre = Utils.leeString("Enter the name: ");
         String proveedor = Utils.leeString("Enter the supplier: ");
         Customer c= null;
-        c  = (Customer)cd.searchCustomer(Utils.leeString("Enter the customers DNI"));
+        c  = (Customer)cd.findCustomer(Utils.devuelveDNI("Enter the customers DNI: "));
 
 
         Order order = new Order(cod, nombre, proveedor, c);

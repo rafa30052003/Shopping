@@ -1,43 +1,43 @@
 package model.dao;
 
+
 import model.dto.Customer;
 import model.dto.Order;
+import utils.Utils;
 
 import java.util.ArrayList;
 
 public class CostumerDao {
-    private ArrayList <Customer> cliente = new ArrayList<Customer>();
+    private ArrayList <Customer> clientes = new ArrayList<Customer>();
 
 
     public boolean addOrder(Customer c) {
         boolean valid = false;
-        if(!cliente.contains(c)){
-            cliente.add(c);
+        if(!clientes.contains(c)){
+            clientes.add(c);
             valid=true;
         }
         return valid;
     }
 
 
-    public Customer searchCustomer(String dni) {
-        Customer c = null;
-        if(!cliente.isEmpty()) {
-            for(Customer customer : cliente) {
-                if(customer.getDni().equals(dni)) {
-                    c=customer;
-                }
-            }
-        }else {
-
-        }
-
-        return c;
-    }
+    public Customer findCustomer(String dni) {
+		Customer u=null;
+		for(Customer c: clientes) {
+			if(c.getDni().equals(dni)) {
+					u=c;
+					break;
+			}else {
+				Utils.print("No se encuentra el elemento introducido");
+			}
+		}
+		return u;
+	}
 
     public boolean deleteCustomer(Customer c) {
         boolean valid = false;
-        if(cliente.contains(c)) {
-            cliente.remove(c);
+        if(clientes.contains(c)) {
+            clientes.remove(c);
             valid = true;
         }else {
 
@@ -47,7 +47,7 @@ public class CostumerDao {
 
     public String showAllCustomer() {
         String result="";
-        for(Customer p: cliente) {
+        for(Customer p: clientes) {
             if(p!=null) {
                 result+=p+"\n";
             }
