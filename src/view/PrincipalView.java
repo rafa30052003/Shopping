@@ -49,8 +49,8 @@ public class PrincipalView {
         System.out.println("                             ");
 	}
 	
-=======
-	public void menuClient() {
+
+	public void menuClientView() {
         System.out.println("                             ");
         System.out.println(" ___________________________ ");
         System.out.println("|                           |");
@@ -65,7 +65,7 @@ public class PrincipalView {
         System.out.println("|___________________________|");
         System.out.println("                             ");
 	}
-	public void addClient() {
+	public void addClientView() {
 
         System.out.println("                             ");
         System.out.println(" __________________________");
@@ -74,7 +74,7 @@ public class PrincipalView {
         System.out.println("|__________________________|");
         System.out.println("                             ");
 	}
-	public void client() {
+	public void clientView() {
 
         System.out.println("                             ");
         System.out.println(" __________________________");
@@ -84,7 +84,7 @@ public class PrincipalView {
         System.out.println("                             ");
 	}
 	
->>>>>>> 018d26f2d876db055b616e0e9bcb1aed1250297a
+
 	public void editClient() {
 
         System.out.println("                             ");
@@ -122,7 +122,7 @@ public class PrincipalView {
         System.out.println("                             ");
 	}
 	
-	public void addOrder() {
+	public void addOrderView() {
 
         System.out.println("                             ");
         System.out.println(" __________________________");
