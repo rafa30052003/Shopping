@@ -2,6 +2,19 @@ package view;
 
 public class PrincipalView {
 	
+
+	public void Menu() {
+        System.out.println("                             ");
+        System.out.println(" ___________________________ ");
+        System.out.println("|                           |");
+        System.out.println("|          GESTIÓN          |");
+        System.out.println("|                           |");
+        System.out.println("| [0]-> Salir               |");
+        System.out.println("| [1]-> Gestion De Clientes |");
+        System.out.println("| [2]-> Gestion De Pedidos  |");
+        System.out.println("|___________________________|");
+	}
+	
 	public void menuClient() {
         System.out.println("                             ");
         System.out.println(" ___________________________ ");
@@ -36,6 +49,8 @@ public class PrincipalView {
         System.out.println("                             ");
 	}
 	
+
+
 	public void editClient() {
 
         System.out.println("                             ");
@@ -73,7 +88,7 @@ public class PrincipalView {
         System.out.println("                             ");
 	}
 	
-	public void addOrder() {
+	public void addOrderView() {
 
         System.out.println("                             ");
         System.out.println(" __________________________");

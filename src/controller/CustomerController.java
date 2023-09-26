@@ -3,6 +3,7 @@ package controller;
 import model.dao.CostumerDao;
 import model.dto.Customer;
 import utils.Utils;
+import view.PrincipalView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,12 +22,12 @@ public class CustomerController {
         this.customerDao = new CostumerDao();
         this.scanner = new Scanner(System.in);
     }
-
+    PrincipalView pv = new PrincipalView();
     public void controlCustomerMenu() {
         int option;
         boolean valid = false;
         do {
-            controlCustomerMenu();
+           pv.menuClient();
             option = Utils.leeEntero("Enter the option you want to choose: ");
             switch (option) {
                 case 0:
@@ -40,10 +41,11 @@ public class CustomerController {
                     controlSearchCustomer();
                     break;
                 case 3:
-                    controlDeleteCustomer();
+                    controlaEditCustomer();
                     break;
                 case 4:
-                    showAllCustomers();
+                    controlDeleteCustomer();
+
                     break;
                 default:
                     Utils.print("Incorrect option.");
@@ -102,6 +104,20 @@ public class CustomerController {
        Utils.printObject(customer);
     }
 
+    public void controlaEditCustomer() {
+        pv.editClient();
+        Customer u = null;
+        CostumerDao cd = new CostumerDao();
+        u = cd.searchCustomer(Utils.devuelveDNI("Introduce el DNI de el Cliente a modificar: "));
 
+        String nombre = Utils.leeString("Introduce el nombre: ");
+        String tlf = Utils.leeString("Introduce el telefono: ");
+        String adress = Utils.leeString("Introduce la direccion: ");
+        u.setNombre(nombre);
+        u.setTlf(tlf);
+        u.setDireccion(adress);
+
+
+    }
 
 }
